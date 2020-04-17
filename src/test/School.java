@@ -1,3 +1,5 @@
+package test;
+
 public class School {
     private String naam = "HU";
 
