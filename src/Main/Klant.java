@@ -8,15 +8,15 @@ public class Klant {
         naam = nm;
     }
 
+    public double getKorting() {
+        return kortingsPercentage;
+    }
+
     public void setKorting(Double kP) {
         kortingsPercentage = kP;
     }
 
-    public Double getKorting() {
-        return kortingsPercentage;
-    }
-
     public String toString() {
-        return "op naam van: " + naam + "(korting: "+ kortingsPercentage + "%)";
+        return "op naam van: " + naam + "(korting: " + kortingsPercentage + "%)";
     }
 }
