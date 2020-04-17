@@ -3,6 +3,8 @@ package Main;
 import test.Student;
 import test.Zwembad;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] arg) {
         //Formatieve Opdracht: Opstart in OO
@@ -30,6 +32,7 @@ public class Main {
         Student s3 = new Student("Youssef", 32 , new int[]{3, 7, 10, 8}, "Yarrak");
 
         //Formatieve Opdracht 1a
+        //Autoverhuur
         AutoHuur ah1 = new AutoHuur();
         System.out.println("Eerste autohuur: " + "\n" + ah1.toString());
 
@@ -38,13 +41,13 @@ public class Main {
         ah1.setHuurder(k);
         System.out.println("Eerste autohuur: " + "\n" + ah1.toString());
 
-        Auto a1 = new Auto("Peugeot 207 ", 50);
+        Auto a1 = new Auto("Peugeot 207 ", 50.0);
         ah1.setGehuurdeAuto(a1);
         ah1.setAantalDagen(4);
         System.out.println("Eerste autohuur: " + "\n" + ah1.toString());
 
         AutoHuur ah2 = new AutoHuur();
-        Auto a2 = new Auto("Ferrari", 3500);
+        Auto a2 = new Auto("Ferrari", 3500.0);
         ah2.setGehuurdeAuto(a2);
         ah2.setHuurder(k);
         ah2.setAantalDagen(1);
@@ -52,5 +55,36 @@ public class Main {
         System.out.println("Tweede autohuur: " + "\n" + ah2.toString());
         System.out.println("Gehuurd: " + ah1.getGehuurdeAuto());
         System.out.println("Gehuurd: " + ah2.getGehuurdeAuto());
+
+        //Gameswinkel
+        Integer releaseJaar1 = LocalDate.now().getYear() - 1;
+        Integer releaseJaar2 = LocalDate.now().getYear() - 2;
+
+        Game g1 = new Game("Just Cause 3", releaseJaar1, 49.98);
+        Game g2 = new Game("Need for Speed: Rivals", releaseJaar2, 45.99);
+        Game g3 = new Game("Need for Speed: Rivals", releaseJaar2, 45.99);
+
+        Persoon p1 = new Persoon("Eric", 200.0);
+        Persoon p2 = new Persoon("Hans", 55.0);
+        Persoon p3 = new Persoon("Arno", 185.0);
+
+        System.out.println(p1.koop(g1));
+        System.out.println(p1.koop(g2));
+        System.out.println(p1.koop(g3));
+        System.out.println(p2.koop(g2));
+        System.out.println(p2.koop(g1));
+        System.out.println(p3.koop(g3));
+
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
+
+        System.out.println(p1.verkoop(g1, p3));
+        System.out.println(p2.verkoop(g2, p3));
+        System.out.println(p2.verkoop(g1, p1));
+
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
     }
 }
