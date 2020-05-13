@@ -10,6 +10,7 @@ public class FSM {
 
     public FSM(ArrayList<Node> n) {
         nodes = n;
+        output = new ArrayList<String>(){};
     }
 
     public Node getCurrentNode() {

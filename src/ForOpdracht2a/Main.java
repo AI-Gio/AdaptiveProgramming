@@ -32,9 +32,9 @@ public class Main {
         a.add('A');
         a.add('A');
 //        System.out.println(s0.getNaam() + s0.getNodeA().getNaam());
-        System.out.println(fsm1.getOutput());
+//        System.out.println(fsm1.getOutput());
 //
-//        System.out.println(fsm1.run(a));
+        System.out.println(fsm1.run(a));
 
 // ik heb het idee dat de gesette attributen niet worden meegenomen in de run functie in FSM class, omdat ik de lijst met nodes
 // wel terug krijg maar de gesette informatie zoals de naam en de node die bij overgang A hoort niet mee worden genomen.
