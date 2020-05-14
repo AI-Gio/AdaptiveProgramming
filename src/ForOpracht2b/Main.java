@@ -10,12 +10,12 @@ public class Main {
         Node s5 = new Node("s5",true);
         Node s6 = new Node("s6",true);
 
-        s0.addOvergangen(s1, 0.4);
-        s0.addOvergangen(s2, 0.6);
-        s1.addOvergangen(s3, 0.7);
-        s1.addOvergangen(s4, 0.3);
-        s2.addOvergangen(s5, 0.1);
-        s2.addOvergangen(s6, 0.9);
+        s0.addOvergangen(s1, 0.5);
+        s0.addOvergangen(s2, 0.5);
+        s1.addOvergangen(s3, 0.5);
+        s1.addOvergangen(s4, 0.5);
+        s2.addOvergangen(s5, 0.5);
+        s2.addOvergangen(s6, 0.5);
 
         System.out.println(DTMC.run(s0));
     }

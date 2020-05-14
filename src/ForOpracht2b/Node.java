@@ -24,15 +24,19 @@ public class Node {
     public Node next() {
         Double x = 0.0;
         ArrayList<Node> nodes = new ArrayList<>();
+//      Kijkt of de overgangen van de node naar andere nodes bij elkaar optellen tot 1
         for (Double i:overgangen.values()) {
             x += i;
         }
+//      Tellen ze niet op tot 1 return null
         if (x != 1.0) {
             return null;
         }
         else {
+//          Loop door de overgangen keys(andere nodes)
             for (Node j:overgangen.keySet()){
-                for (int y = 0; y < overgangen.get(j); y++) {
+//              Loop door de range van de waarde van de weg naar de ander node. bv: kans=0.5 -> nodes.add(j) * 5
+                for (int y = 0; y < (overgangen.get(j) * 10); y++) {
                     nodes.add(j);
                 }
             }

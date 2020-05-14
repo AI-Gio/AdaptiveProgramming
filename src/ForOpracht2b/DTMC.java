@@ -17,6 +17,5 @@ public class DTMC {
         else {
             return "The probabilities dont add up to 1";
         }
-
     }
 }
