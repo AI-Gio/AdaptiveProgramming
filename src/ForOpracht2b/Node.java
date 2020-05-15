@@ -23,6 +23,7 @@ public class Node {
 
     public Node next() {
         Double x = 0.0;
+//      Hier komen de nodes in te staan voor random pick met kans
         ArrayList<Node> nodes = new ArrayList<>();
 //      Kijkt of de overgangen van de node naar andere nodes bij elkaar optellen tot 1
         for (Double i:overgangen.values()) {
