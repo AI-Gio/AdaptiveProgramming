@@ -1,4 +1,4 @@
-package test;
+package Practise;
 
 public class Student {
     private String Name;

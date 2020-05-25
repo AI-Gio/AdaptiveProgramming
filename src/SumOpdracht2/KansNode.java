@@ -7,8 +7,9 @@ public class KansNode {
     private boolean endnode;
     private HashMap<KansNode, Double> Kovergangen = new HashMap<>();
 
-    public KansNode(String naam) {
+    public KansNode(String naam, Boolean endnode) {
         this.naam = naam;
+        this.endnode = endnode;
     }
 
     //Dit sorteerd een hashmap bij values, bron:https://beginnersbook.com/2013/12/how-to-sort-hashmap-in-java-by-keys-and-values/

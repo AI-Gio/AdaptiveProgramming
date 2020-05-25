@@ -1,4 +1,4 @@
-package test;
+package Practise;
 
 public class School {
     private String naam = "HU";

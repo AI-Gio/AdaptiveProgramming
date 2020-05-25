@@ -1,7 +1,7 @@
 package Main;
 
-import test.Student;
-import test.Zwembad;
+import Practise.Student;
+import Practise.Zwembad;
 
 import java.time.LocalDate;
 
